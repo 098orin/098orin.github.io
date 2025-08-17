@@ -33,9 +33,15 @@ h1, h2, h3 {
 
 
 /* sns-links */
-.sns-links li {
-  display: inline-block; /* 横並び */
-  margin-right: 15px;    /* アイコン間の間隔 */
+.sns-links {
+  list-style: none;       /* 丸数字を消す */
+  padding: 0;
+  margin: 0;
+  
+  display: flex;          /* 横並びにする */
+  justify-content: center; /* 中央寄せ */
+  gap: 15px;               /* アイコン間の間隔 */
+  flex-wrap: nowrap; /* 折り返さないでスクロール */
 }
 .sns-links li a {
   display: inline-block;
