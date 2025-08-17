@@ -1,10 +1,13 @@
+html {
+    background-color: #1f1f1f;
+}
 body {
-  background-color: #121212; /* 黒に近いダークグレー */
+  background-color: #232229;
   color: #f0f0f0;           /* 文字は明るく */
   font-family: 'Helvetica Neue', sans-serif;
   line-height: 1.6;
-  margin: 0;
-  padding: 0 20px;
+  margin: auto;
+  padding: 20px;
 }
 a {
   color: #1e90ff; /* アクセントカラー（リンクやアイコン用） */
