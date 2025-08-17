@@ -25,7 +25,7 @@ h1, h2, h3 {
   background-color: #1f1f1f;
   padding: 20px;
   border-radius: 12px;
-  max-width: 400px;
+  max-width: 500px;
   margin: 20px auto;
   box-shadow: 0 4px 20px rgba(0,0,0,0.5);
   text-align: center;
@@ -47,7 +47,6 @@ h1, h2, h3 {
   display: inline-block;
   width: 50px;
   height: 50px;
-  background-color: #1f1f1f;  /* アイコン背景も暗く */
   border-radius: 50%;
   text-align: center;
   line-height: 45px;
