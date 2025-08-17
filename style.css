@@ -6,8 +6,8 @@ body {
   color: #f0f0f0;           /* 文字は明るく */
   font-family: 'Helvetica Neue', sans-serif;
   line-height: 1.6;
-  margin: auto;
-  padding: 20px;
+  margin: 0 20px; /* 左右の余白 */
+  padding: 0 20px;
 }
 a {
   color: #1e90ff; /* アクセントカラー（リンクやアイコン用） */
