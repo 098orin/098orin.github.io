@@ -8,6 +8,8 @@ body {
   line-height: 1.6;
   margin: 0 20px; /* 左右の余白 */
   padding: 0 20px;
+  padding-bottom: 20px; /* 下の余白 */
+  min-height: 95vh; /* 最低限の高さを確保 */
 }
 a {
   color: #1e90ff; /* アクセントカラー（リンクやアイコン用） */
@@ -83,13 +85,6 @@ h1, h2, h3 {
   text-align: center;
 }
 
-/* ghchart */
-.ghchart {
-  overflow-x: auto; /* 横スクロール */
-  overflow-y: hidden;
-  scrollbar-width: thin; /* スクロールバーを細く */
-}
-
 /* sns-links */
 .sns-links {
   list-style: none;       /* 丸数字を消す */
@@ -100,6 +95,7 @@ h1, h2, h3 {
   gap: 15px;               /* アイコン間の間隔 */
   flex-wrap: nowrap; /* 折り返さない*/
   overflow-x: auto; /* スクロール */
+  justify-content: flex-start; /* 左寄せにしてスクロール */
   overflow-y: hidden; /* 縦のスクロールは隠す */
   scrollbar-width: thin; /* スクロールバーを細く */
 }
@@ -125,3 +121,9 @@ h1, h2, h3 {
   filter: brightness(0) invert(0.6); /* ホバーで少し青み */
 }
 
+/* ghchart */
+.ghchart {
+  overflow-x: auto; /* 横スクロール */
+  overflow-y: hidden;
+  scrollbar-width: thin; /* スクロールバーを細く */
+}
