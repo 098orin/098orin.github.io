@@ -83,6 +83,12 @@ h1, h2, h3 {
   text-align: center;
 }
 
+/* ghchart */
+.ghchart {
+  overflow-x: auto; /* 横スクロール */
+  overflow-y: hidden;
+  scrollbar-width: thin; /* スクロールバーを細く */
+}
 
 /* sns-links */
 .sns-links {
@@ -95,7 +101,7 @@ h1, h2, h3 {
   flex-wrap: nowrap; /* 折り返さない*/
   overflow-x: auto; /* スクロール */
   overflow-y: hidden; /* 縦のスクロールは隠す */
-  scrollbar-width: thin; /* Firefoxのスクロールバーを細く */
+  scrollbar-width: thin; /* スクロールバーを細く */
 }
 .sns-links li a {
   display: inline-block;
