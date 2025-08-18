@@ -1,3 +1,6 @@
+html {
+  padding: 0 40px;
+}
 body {
   margin: 0;
   padding: 0;
@@ -30,9 +33,9 @@ h1, h2, h3 {
 /* main-nav */
 /* ナビ全体 */
 .main-nav {
-  background-color: #1f1f1f;
+  background-color: #2d2d44;
   padding: 10px 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  border-bottom: solid 2px #191919;
 }
 
 /* ulを横並びに */
