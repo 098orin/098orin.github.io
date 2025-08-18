@@ -95,9 +95,15 @@ h1, h2, h3 {
   gap: 15px;               /* アイコン間の間隔 */
   flex-wrap: nowrap; /* 折り返さない*/
   overflow-x: auto; /* スクロール */
-  justify-content: flex-start; /* 左寄せにしてスクロール */
   overflow-y: hidden; /* 縦のスクロールは隠す */
   scrollbar-width: thin; /* スクロールバーを細く */
+}
+@media (max-width: 600px) {
+  .sns-links {
+    justify-content: flex-start; /* スマホでは左寄せ */
+    padding-left: 10px; /* 角っとならないように左側にパディングを追加 */
+  }
+  
 }
 .sns-links li a {
   display: inline-block;
