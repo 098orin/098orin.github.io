@@ -1,14 +1,16 @@
-html {
-    background-color: #1f1f1f;
-}
 body {
-  background-color: #232229;
-  color: #f0f0f0;           /* 文字は明るく */
+  margin: 0;
+  padding: 0;
+  color: #f0f0f0;
   font-family: 'Helvetica Neue', sans-serif;
+  background-color: #1f1f1f; /* 背景色 */
+}
+main {
+  background-color: #232229;
   line-height: 1.6;
-  margin: 0 20px; /* 左右の余白 */
-  padding: 0 20px;
-  padding-bottom: 20px; /* 下の余白 */
+  margin: 0;
+  margin-bottom: 20px; /* 下に余白を追加 */
+  padding: 20px;
   min-height: 95vh; /* 最低限の高さを確保 */
 }
 a {
@@ -28,7 +30,7 @@ h1, h2, h3 {
 /* main-nav */
 /* ナビ全体 */
 .main-nav {
-  background-color: #1f1f1f; /* 黒寄りの背景 */
+  background-color: #1f1f1f;
   padding: 10px 20px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.5);
 }
@@ -103,7 +105,6 @@ h1, h2, h3 {
     justify-content: flex-start; /* スマホでは左寄せ */
     padding-left: 10px; /* 角っとならないように左側にパディングを追加 */
   }
-  
 }
 .sns-links li a {
   display: inline-block;
