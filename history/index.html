@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="canonical" href="https://098orin.github.io/history/">
+  <link rel="stylesheet" href="../style.css">
+  <title>TOP | 098orin.github.io</title>
+  <!-- Open Graph -->
+  <meta property="og:url" content="https://098orin.github.io/history/">
+  <meta property="og:title" content="TOP | 098orin.github.io">
+  <meta property="og:description" content="098orin.github.io">
+  <!-- end Open Graph -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JE7CQLY5RL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-JE7CQLY5RL');
+  </script>
+  <!-- end Google tag (gtag.js) -->
+  <style>
+    #commits {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    #commits li {
+      background: #1e1e1e;          /* ダークモード風の背景 */
+      border: 1px solid #333;       /* 薄い枠線 */
+      border-radius: 8px;           /* 角丸 */
+      padding: 12px 15px;
+      margin-bottom: 10px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    #commits li:hover {
+      transform: translateY(-2px);  /* ホバーで少し浮く */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+    #commits li a {
+      font-weight: bold;
+      color: #58a6ff;               /* GitHubリンクっぽい青 */
+      text-decoration: none;
+    }
+
+    #commits li a:hover {
+      text-decoration: underline;
+    }
+
+    #commits small {
+      display: block;
+      margin-top: 6px;
+      font-size: 0.85em;
+      color: #aaa;
+    }
+
+    /* ボタン */
+    #loadMore {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 1em;
+      background: #58a6ff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    #loadMore:hover {
+      background: #1f6feb;
+      transform: scale(1.05);
+    }
+
+    #loadMore:disabled {
+      background: #555;
+      cursor: not-allowed;
+    }
+
+  </style>
+</head>
+<body>
+  <nav class="main-nav">
+    <ul>
+      <li><a href="https://098orin.github.io/">TOP</a></li>
+      <li><a href="https://098orin.github.io/works/">WORKS</a></li>
+      <li><a href="https://098orin.github.io/history/">HISTORY</a></li>
+    </ul>
+  </nav>
+  <main>
+    <div id="commits"></div>
+    <button id="loadMore">もっと見る</button>
+
+    <script>
+    const repo = "098orin/098orin.github.io";
+    let page = 1;
+    const perPage = 20;
+    let allLoaded = false;
+
+    async function loadCommits() {
+      if (allLoaded) return;
+
+      const res = await fetch(`https://api.github.com/repos/${repo}/commits?per_page=${perPage}&page=${page}`);
+      const data = await res.json();
+
+      if (data.length === 0) {
+        document.getElementById("loadMore").disabled = true;
+        document.getElementById("loadMore").innerText = "すべて読み込みました";
+        allLoaded = true;
+        return;
+      }
+
+      let html = "";
+      data.forEach(commit => {
+        html += `
+          <li>
+            <a href="${commit.html_url}" target="_blank">${commit.commit.message}</a>
+            <small> by ${commit.commit.author.name} (${new Date(commit.commit.author.date).toLocaleString()})</small>
+          </li>`;
+      });
+
+      // 追加表示
+      document.getElementById("commits").innerHTML += html;
+
+      page++;
+    }
+
+    document.getElementById("loadMore").addEventListener("click", loadCommits);
+
+    // 初回ロード
+    loadCommits();
+    </script>
+
+  </main>
+</html>
