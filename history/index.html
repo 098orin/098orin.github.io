@@ -30,9 +30,9 @@
     }
 
     #commits li {
-      background: #1e1e1e;          /* ダークモード風の背景 */
-      border: 1px solid #333;       /* 薄い枠線 */
-      border-radius: 8px;           /* 角丸 */
+      background: #1e1e1e;  /* ダークモードの背景 */
+      border: 1px solid #333;  /* 枠線 */
+      border-radius: 8px;  /* 角丸 */
       padding: 12px 15px;
       margin-bottom: 10px;
       transition: transform 0.2s, box-shadow 0.2s;
@@ -45,7 +45,7 @@
 
     #commits li a {
       font-weight: bold;
-      color: #58a6ff;               /* GitHubリンクっぽい青 */
+      color: #58a6ff;
       text-decoration: none;
     }
 
@@ -126,7 +126,7 @@
         const a = document.createElement("a");
         a.href = commit.html_url;
         a.target = "_blank";
-        a.textContent = commit.commit.message;  // ← ここでエスケープ済みになる
+        a.textContent = commit.commit.message;  // ← ここでエスケープ済みにする
 
         // 補足情報
         const small = document.createElement("small");
