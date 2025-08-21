@@ -117,17 +117,25 @@
         return;
       }
 
-      let html = "";
-      data.forEach(commit => {
-        html += `
-          <li>
-            <a href="${commit.html_url}" target="_blank">${commit.commit.message}</a>
-            <small> by ${commit.commit.author.name} (${new Date(commit.commit.author.date).toLocaleString()})</small>
-          </li>`;
-      });
+      const commitsEl = document.getElementById("commits");
 
-      // 追加表示
-      document.getElementById("commits").innerHTML += html;
+      data.forEach(commit => {
+        const li = document.createElement("li");
+
+        // コミットリンク
+        const a = document.createElement("a");
+        a.href = commit.html_url;
+        a.target = "_blank";
+        a.textContent = commit.commit.message;  // ← ここでエスケープ済みになる
+
+        // 補足情報
+        const small = document.createElement("small");
+        small.textContent = `by ${commit.commit.author.name} (${new Date(commit.commit.author.date).toLocaleString()})`;
+
+        li.appendChild(a);
+        li.appendChild(small);
+        commitsEl.appendChild(li);
+      });
 
       page++;
     }
@@ -137,6 +145,7 @@
     // 初回ロード
     loadCommits();
     </script>
+
 
   </main>
 </html>
