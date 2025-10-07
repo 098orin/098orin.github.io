@@ -118,6 +118,13 @@
       </a>
       <div class="work-readme" data-repo="tw-extensions"></div>
     </div>
+    <div class="work-card">
+      <h4>Orinim Browser</h4>
+      <a href="https://github.com/Orinas-github/Orinium-browser" target="_blank" rel="noopener noreferrer">
+        https://github.com/Orinas-github/Orinium-browser
+      </a>
+      <div class="work-readme" data-user="Orinas-github" data-repo="Orinium-browser"></div>
+    </div>
 
   <script>
     async function fetchReadme(user, repo, container, maxLines = 3) {
@@ -176,7 +183,8 @@
     // 全ての .work-readme に対して処理
     document.querySelectorAll('.work-readme').forEach(div => {
       const repo = div.dataset.repo;
-      fetchReadme('098orin', repo, div);
+      const user = div.dataset.user || '098orin';
+      fetchReadme(user, repo, div);
     });
   </script>
   </main>
