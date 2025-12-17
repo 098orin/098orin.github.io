@@ -39,7 +39,7 @@
   }
 
   .work-readme {
-    max-height: 200px; 
+    max-height: 300px; 
     overflow-y: auto;
     border-top: 1px solid #eee;
     padding-top: 10px;
@@ -127,7 +127,7 @@
     </div>
 
   <script>
-    async function fetchReadme(user, repo, container, maxLines = 3) {
+    async function fetchReadme(user, repo, container, maxLines = 10) {
       const url = `https://api.github.com/repos/${user}/${repo}/readme`;
       
       try {
