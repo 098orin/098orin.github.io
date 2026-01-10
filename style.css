@@ -14,7 +14,7 @@ main {
     margin: 0;
     margin-bottom: 10px; /* 下に余白を追加 */
     padding: 20px;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     min-height: 95vh; /* 最低限の高さを確保 */
 }
 a {
@@ -86,9 +86,9 @@ h3 {
     width: 70%;
     gap: 15px;
     margin: 20px auto;
-    padding: 2px;
     border: 2px solid #1f1f3f;
     padding: 20px;
+    padding-top: 5px;
     background-color: #1f1f2f;
 }
 
