@@ -1,139 +1,141 @@
 html {
-  padding: 0 40px;
+    padding: 0 40px;
 }
 body {
-  margin: 0;
-  padding: 0;
-  color: #f0f0f0;
-  font-family: 'Helvetica Neue', sans-serif;
-  background-color: #1f1f1f; /* 背景色 */
+    margin: 0;
+    padding: 0;
+    color: #f0f0f0;
+    font-family: "Helvetica Neue", sans-serif;
+    background-color: #1f1f1f; /* 背景色 */
 }
 main {
-  background-color: #2c2a38;
-  line-height: 1.6;
-  margin: 0;
-  margin-bottom: 20px; /* 下に余白を追加 */
-  padding: 20px;
-  min-height: 95vh; /* 最低限の高さを確保 */
+    background-color: #2c2a38;
+    line-height: 1.6;
+    margin: 0;
+    margin-bottom: 20px; /* 下に余白を追加 */
+    padding: 20px;
+    min-height: 95vh; /* 最低限の高さを確保 */
 }
 a {
-  color: #1e90ff; /* アクセントカラー（リンクやアイコン用） */
-  text-decoration: none;
-  transition: color 0.3s;
+    color: #1e90ff; /* アクセントカラー（リンクやアイコン用） */
+    text-decoration: none;
+    transition: color 0.3s;
 }
 a:hover {
-  color: #63b3ed; /* ホバーで少し明るく */
+    color: #63b3ed; /* ホバーで少し明るく */
 }
-h1, h2, h3 {
-  color: #ffffff;
-  margin-bottom: 0.5em;
+h1,
+h2,
+h3 {
+    color: #ffffff;
+    margin-bottom: 0.5em;
 }
-
 
 /* main-nav */
 /* ナビ全体 */
 .main-nav {
-  background-color: #2d2d44;
-  padding: 10px 20px;
-  border-bottom: solid 2px #191919;
+    background-color: #2d2d44;
+    padding: 10px 20px;
+    border-bottom: solid 2px #191919;
 }
 
 /* ulを横並びに */
 .main-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center; /* 中央寄せ */
-  gap: 30px;               /* メニュー間隔 */
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center; /* 中央寄せ */
+    gap: 30px; /* メニュー間隔 */
+    margin: 0;
+    padding: 0;
 }
 
 /* aタグの見た目 */
 .main-nav ul li a {
-  color: #f0f0f0;         /* 白文字 */
-  text-decoration: none;
-  font-weight: 500;
-  position: relative;
-  padding: 5px 0;
-  transition: color 0.3s;
+    color: #f0f0f0; /* 白文字 */
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s;
 }
 
 /* ホバー時のエフェクト（下線アニメーション） */
 .main-nav ul li a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -3px;
-  width: 0%;
-  height: 2px;
-  background-color: #1e90ff; /* アクセントブルー */
-  transition: width 0.3s;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    background-color: #1e90ff; /* アクセントブルー */
+    transition: width 0.3s;
 }
 
 .main-nav ul li a:hover::after {
-  width: 100%; /* ホバーで下線が出る */
+    width: 100%; /* ホバーで下線が出る */
 }
 
 .main-nav ul li a:hover {
-  color: #1e90ff; /* ホバーで文字もアクセント色 */
+    color: #1e90ff; /* ホバーで文字もアクセント色 */
 }
-
 
 /* profile-box */
 .profile-box {
-  background-color: #1f1f1f;
-  padding: 20px;
-  border-radius: 12px;
-  max-width: 500px;
-  margin: 20px auto;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-  text-align: center;
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 500px;
+    margin: 20px auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
 }
 
 /* sns-links */
 .sns-links {
-  list-style: none;       /* 丸数字を消す */
-  padding: 0;
-  margin: 0;
-  display: flex;          /* 横並びにする */
-  justify-content: center; /* 中央寄せ */
-  gap: 15px;               /* アイコン間の間隔 */
-  flex-wrap: nowrap; /* 折り返さない*/
-  overflow-x: auto; /* スクロール */
-  overflow-y: hidden; /* 縦のスクロールは隠す */
-  scrollbar-width: thin; /* スクロールバーを細く */
+    list-style: none; /* 丸数字を消す */
+    padding: 0;
+    margin: 0;
+    display: flex; /* 横並びにする */
+    justify-content: center; /* 中央寄せ */
+    gap: 15px; /* アイコン間の間隔 */
+    flex-wrap: nowrap; /* 折り返さない*/
+    overflow-x: auto; /* スクロール */
+    overflow-y: hidden; /* 縦のスクロールは隠す */
+    scrollbar-width: thin; /* スクロールバーを細く */
 }
 @media (max-width: 600px) {
-  .sns-links {
-    justify-content: flex-start; /* スマホでは左寄せ */
-    padding-left: 10px; /* 角っとならないように左側にパディングを追加 */
-  }
+    .sns-links {
+        justify-content: flex-start; /* スマホでは左寄せ */
+        padding-left: 10px; /* 角っとならないように左側にパディングを追加 */
+    }
 }
 .sns-links li a {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 45px;
-  transition: background-color 0.3s, transform 0.3s;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 45px;
+    transition:
+        background-color 0.3s,
+        transform 0.3s;
 }
 .sns-links li a:hover {
-  background-color: #1e90ff; /* ホバーでアクセントブルー */
-  transform: scale(1.1);     /* 少し拡大 */
+    background-color: #1e90ff; /* ホバーでアクセントブルー */
+    transform: scale(1.1); /* 少し拡大 */
 }
 .sns-links li img {
-  vertical-align: middle;
-  filter: brightness(0) invert(1); /* アイコンを白く */
-  transition: filter 0.3s;
+    vertical-align: middle;
+    filter: brightness(0) invert(1); /* アイコンを白く */
+    transition: filter 0.3s;
 }
 .sns-links li a:hover img {
-  filter: brightness(0) invert(0.6); /* ホバーで少し青み */
+    filter: brightness(0) invert(0.6); /* ホバーで少し青み */
 }
 
 /* ghchart */
 .ghchart {
-  overflow-x: auto; /* 横スクロール */
-  overflow-y: hidden;
-  scrollbar-width: thin; /* スクロールバーを細く */
+    overflow-x: auto; /* 横スクロール */
+    overflow-y: hidden;
+    scrollbar-width: thin; /* スクロールバーを細く */
 }
