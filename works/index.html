@@ -39,7 +39,7 @@
   }
 
   .work-readme {
-    max-height: 300px; 
+    max-height: 300px;
     overflow-y: auto;
     border-top: 1px solid #eee;
     padding-top: 10px;
@@ -103,6 +103,7 @@
     <ul>
       <li><a href="https://098orin.github.io/">TOP</a></li>
       <li><a href="https://098orin.github.io/works/">WORKS</a></li>
+      <li><a href="https://098orin.github.io/links">LINKS</a></li>
       <li><a href="https://098orin.github.io/history/">HISTORY</a></li>
       <li><a href="https://098orin.github.io/tools">TOOLS</a></li>
     </ul>
@@ -129,7 +130,7 @@
   <script>
     async function fetchReadme(user, repo, container, maxLines = 10) {
       const url = `https://api.github.com/repos/${user}/${repo}/readme`;
-      
+
       try {
         const res = await fetch(url, {
           headers: { Accept: 'application/vnd.github.v3.raw' }
