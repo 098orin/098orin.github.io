@@ -77,9 +77,12 @@
       </div>
 
       <p>Blueskyのタイムライン</p>
-     <div style="height: 500px;">
-      <script src="https://blueskytimeline.com/timeline.js" async data-handle="098orin.bsky.social" data-theme="light" data-width="420" data-height="500" data-lang="ja" data-ui="0" data-pin="0" data-rp="0" data-thread="0"></script>
-     </div>
+      <div style="height: 500px;">
+        <!-- BlueskyTimeline Widget -->
+        <bst-widget data-handle="098orin.bsky.social" data-theme="gray" data-width="420px" data-height="500px" data-lang="ja" data-ui="0" data-pin="0" data-rp="0" data-thread="0" data-prof="2"></bst-widget>
+        <script src="https://blueskytimeline.com/v2/timeline.js" type="module" defer></script>
+        <!-- /BlueskyTimeline Widget --> 
+      </div>
     </div>
       <fieldset class="banner"><legend class="banner-title">ばなー</legend><img src="banners/200x40.png"/></fieldset>
   </main>
